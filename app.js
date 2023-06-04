@@ -18,7 +18,6 @@ const letters = document.getElementsByClassName("letter");
 
 const hiddenWord = words[Math.floor(Math.random() * words.length) + 1].split("");
 let wrongGuesses = [];
-let hangman = [];
 
 function createHiddenWord() {
   hiddenWord.map(e => {
