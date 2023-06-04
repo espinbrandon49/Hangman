@@ -7,9 +7,9 @@ const word = document.getElementById("word");
 const wrong = document.getElementById("wrong");
 // bring out the next contestant
 const playButton = document.getElementById("play-button");
-// modal-like container to display the final sentence at the end of the trial
+// modal-like container to display the final sentence when the game ends
 const popupContainer = document.getElementById("popup-container");
-// notifies the condemned if the letter has already been guessed
+// notify that the letter has been guessed
 const notificationContainer = document.getElementById("notification-container");
 // displays the final verdict
 const message = document.getElementById("message");
@@ -26,7 +26,7 @@ function createHiddenWord() {
     <span class="letter hidden">${e}</span/>
     `
   });
-  // console.log(hiddenWord);
+  console.log(hiddenWord);
 }
 
 function correctGuess(guess) {
