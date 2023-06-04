@@ -13,10 +13,11 @@ const popupContainer = document.getElementById("popup-container");
 const notificationContainer = document.getElementById("notification-container");
 // displays the final verdict
 const message = document.getElementById("message");
-// collection of div.letter that comprise the hidden word
+// collection of div.letter that comprises the hidden word
 const letters = document.getElementsByClassName("letter");
 
-const hiddenWord = words[Math.floor(Math.random() * words.length) + 1].split("");
+const hiddenWord = words[Math.floor(Math.random() * words.length) + 1]
+.split("");
 let wrongGuesses = [];
 
 function createHiddenWord() {
@@ -83,8 +84,9 @@ function win() {
 }
 
 playButton.addEventListener("click", () => window.location.reload());
+
 window.addEventListener("keydown", (e) => {
-  const guess = e.key;
+  const guess = e.key.toLowerCase();
   notificationContainer.classList.remove("show");
   if (/^[a-zA-Z]+$/.test(guess) && guess.length == 1) {
     repeatedLetter(guess);
