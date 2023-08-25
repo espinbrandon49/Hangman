@@ -176,3 +176,13 @@ h1 {
 .notification-container.show {
   transform: translateY(-50px);
 }
+
+svg {
+  border: 1px solid #34495e;
+  cursor: pointer;
+  opacity: .4;
+}
+
+svg:hover {
+  opacity: 1;
+}
